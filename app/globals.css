@@ -55,4 +55,24 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* Scrolling News Animation */
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 25s linear infinite;
+  }
+
+  .scrolling-container:hover .scrolling-text {
+    animation-play-state: paused;
+  }
 }
